@@ -13,24 +13,24 @@ import subprocess
 import argparse
 import numpy as np
 
-import c2nl.config as config
-import c2nl.inputters.utils as util
-import c2nl.inputters.vector as vector
-import c2nl.inputters.dataset as data
+import code2com.config as config
+import code2com.inputters.utils as util
+import code2com.inputters.vector as vector
+import code2com.inputters.dataset as data
 from tqdm import tqdm
 from main.model import Code2NaturalLanguage
 from main.train import compute_eval_score
 
 from collections import OrderedDict
-from c2nl.utils.copy_utils import collapse_copy_scores, make_src_map, align
-from c2nl.inputters.timer import AverageMeter, Timer
-from c2nl.inputters import constants
-from c2nl.eval.bleu import Bleu, nltk_corpus_bleu, corpus_bleu
-from c2nl.eval.rouge import Rouge
-from c2nl.eval.meteor import Meteor
-from c2nl.translator.translator import Translator
-from c2nl.translator.beam import GNMTGlobalScorer
-from c2nl.translator.translation import TranslationBuilder
+from code2com.utils.copy_utils import collapse_copy_scores, make_src_map, align
+from code2com.inputters.timer import AverageMeter, Timer
+from code2com.inputters import constants
+from code2com.eval.bleu import Bleu, nltk_corpus_bleu, corpus_bleu
+from code2com.eval.rouge import Rouge
+from code2com.eval.meteor import Meteor
+from code2com.translator.translator import Translator
+from code2com.translator.beam import GNMTGlobalScorer
+from code2com.translator.translation import TranslationBuilder
 
 logger = logging.getLogger()
 
