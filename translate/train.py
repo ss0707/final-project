@@ -13,20 +13,20 @@ import subprocess
 import argparse
 import numpy as np
 
-import c2nl.config as config
-import c2nl.inputters.utils as util
-from c2nl.inputters import constants
+import code2com.config as config
+import code2com.inputters.utils as util
+from code2com.inputters import constants
 
 from collections import OrderedDict, Counter
 from tqdm import tqdm
-from c2nl.inputters.timer import AverageMeter, Timer
-import c2nl.inputters.vector as vector
-import c2nl.inputters.dataset as data
+from code2com.inputters.timer import AverageMeter, Timer
+import code2com.inputters.vector as vector
+import code2com.inputters.dataset as data
 
 from main.model import Code2NaturalLanguage
-from c2nl.eval.bleu import corpus_bleu
-from c2nl.eval.rouge import Rouge
-from c2nl.eval.meteor import Meteor
+from code2com.eval.bleu import corpus_bleu
+from code2com.eval.rouge import Rouge
+from code2com.eval.meteor import Meteor
 
 logger = logging.getLogger()
 
